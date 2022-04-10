@@ -1,0 +1,21 @@
+[0;1;32m●[0m containerd.service - containerd container runtime
+     Loaded: loaded (/lib/systemd/system/containerd.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Fri 2022-04-08 20:35:21 +07; 3h 23min ago
+       Docs: https://containerd.io
+   Main PID: 1143 (containerd)
+      Tasks: 38
+     Memory: 84.9M
+     CGroup: /system.slice/containerd.service
+             ├─ 1143 /usr/bin/containerd
+             └─14100 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 6f42ed12e771b1f276b7e063c0319d537d18c62b5a14eb341761c9f823562841 -address /run/containerd/containerd.sock
+
+Thg 4 08 20:35:21 anhdiepmmk-pc containerd[1143]: time="2022-04-08T20:35:21.064517688+07:00" level=info msg="Start recovering state"
+Thg 4 08 20:35:21 anhdiepmmk-pc containerd[1143]: time="2022-04-08T20:35:21.064581754+07:00" level=info msg="Start event monitor"
+Thg 4 08 20:35:21 anhdiepmmk-pc containerd[1143]: time="2022-04-08T20:35:21.064605023+07:00" level=info msg="Start snapshots syncer"
+Thg 4 08 20:35:21 anhdiepmmk-pc containerd[1143]: time="2022-04-08T20:35:21.064612593+07:00" level=info msg="Start cni network conf syncer"
+Thg 4 08 20:35:21 anhdiepmmk-pc containerd[1143]: time="2022-04-08T20:35:21.064625406+07:00" level=info msg="Start streaming server"
+Thg 4 08 20:35:21 anhdiepmmk-pc containerd[1143]: time="2022-04-08T20:35:21.065421972+07:00" level=info msg=serving... address=/run/containerd/containerd.sock.ttrpc
+Thg 4 08 20:35:21 anhdiepmmk-pc containerd[1143]: time="2022-04-08T20:35:21.065451289+07:00" level=info msg=serving... address=/run/containerd/containerd.sock
+Thg 4 08 20:35:21 anhdiepmmk-pc containerd[1143]: time="2022-04-08T20:35:21.065490291+07:00" level=info msg="containerd successfully booted in 0.060380s"
+Thg 4 08 20:35:21 anhdiepmmk-pc systemd[1]: Started containerd container runtime.
+Thg 4 08 21:04:43 anhdiepmmk-pc containerd[1143]: time="2022-04-08T21:04:43.704005610+07:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/6f42ed12e771b1f276b7e063c0319d537d18c62b5a14eb341761c9f823562841 pid=14100
