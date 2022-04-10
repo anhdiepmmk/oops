@@ -7,9 +7,8 @@ RUN npm install
 
 COPY ./ ./
 
-RUN apk update && apk add libreoffice
+RUN apk add libreoffice-writer
 RUN apk add --no-cache msttcorefonts-installer fontconfig
 RUN update-ms-fonts
 
 RUN npm start
-CMD ["tail", "/dev/null"]
