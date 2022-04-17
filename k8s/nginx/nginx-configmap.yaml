@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-configmap
+data:
+  index.html: |
+    <html>
+    <h1>Heading</h1>
+    </br>
+    <h1>Hi mom</h1>
+    </html
