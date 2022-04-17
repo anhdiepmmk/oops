@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: service1-configmap
+data:
+  index.html: |
+    <html>
+    <h1>Service 1</h1>
+    </br>
+    <h1>hello</h1>
+    </html
