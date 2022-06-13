@@ -470,19 +470,28 @@
     // }
     {
       "packageName": "inventory-service",
-      "projectFolder": "apps/inventory"
+      "projectFolder": "apps/inventory",
+      "tags": ["apps", "core"]
     },
     {
       "packageName": "ship-service",
-      "projectFolder": "apps/ship"
+      "projectFolder": "apps/ship",
+      "tags": ["apps", "core"]
     },
     {
       "packageName": "hello",
-      "projectFolder": "libraries/hello"
+      "projectFolder": "libraries/hello",
+      "tags": ["libs", "utils"]
     },
     {
       "packageName": "world",
-      "projectFolder": "libraries/world"
+      "projectFolder": "libraries/world",
+      "tags": ["libs", "utils"]
+    },
+    {
+      "packageName": "hi",
+      "projectFolder": "libraries/hi",
+      "tags": ["libs", "utils"]
     }
   ]
 }

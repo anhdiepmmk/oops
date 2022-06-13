@@ -9,9 +9,11 @@ importers:
     specifiers:
       express: ~4.18.1
       hello: workspace:*
+      hi: workspace:*
     dependencies:
       express: 4.18.1
       hello: link:../../libraries/hello
+      hi: link:../../libraries/hi
 
   ../../apps/ship:
     specifiers:
@@ -23,6 +25,12 @@ importers:
 
   ../../libraries/hello:
     specifiers: {}
+
+  ../../libraries/hi:
+    specifiers:
+      typescript: ~4.7.3
+    devDependencies:
+      typescript: 4.7.3
 
   ../../libraries/world:
     specifiers: {}
@@ -398,6 +406,12 @@ packages:
       media-typer: 0.3.0
       mime-types: 2.1.35
     dev: false
+
+  /typescript/4.7.3:
+    resolution: {integrity: sha512-WOkT3XYvrpXx4vMMqlD+8R8R37fZkjyLGlxavMc4iB8lrl8L0DeTcHbYgw/v0N/z9wAFsgBhcsF0ruoySS22mA==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true
 
   /unpipe/1.0.0:
     resolution: {integrity: sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==}

@@ -1,5 +1,8 @@
 const express = require("express");
 const { sayHello } = require("hello");
+const { sayHi } = require("hi");
+
+sayHi("hello typescript, this is javascript");
 
 const app = express();
 
