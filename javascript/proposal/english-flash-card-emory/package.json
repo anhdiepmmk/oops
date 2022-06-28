@@ -2,14 +2,18 @@
   "name": "english-flash-card-emory",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "lodash": "^4.17.21",
     "node-notifier": "^10.0.1"
+  },
+  "devDependencies": {
+    "jest": "^28.1.1"
   }
 }
