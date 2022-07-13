@@ -18,7 +18,10 @@ module.exports = {
   },
   devtool: "inline-source-map",
   plugins: [
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "style.css",
+      linkType: "text/css",
+    }),
     new HtmlWebpackPlugin({
       title: "hi mom",
       filename: "index.html",
