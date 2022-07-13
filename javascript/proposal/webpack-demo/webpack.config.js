@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: { main: ["./src/index.js"] },
+  entry: { index: ["./src/index.js"], about: ["./src/about.js"] },
   output: {
     filename: "[name]-[contenthash].js",
     path: path.resolve(__dirname, "dist"),
@@ -23,4 +23,9 @@ module.exports = {
       template: "./index.html",
     }),
   ],
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+  },
 };
