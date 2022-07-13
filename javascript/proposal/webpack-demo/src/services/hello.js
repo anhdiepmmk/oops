@@ -8,4 +8,4 @@ const sayWorld = () => {
   console.log(defaultMessage);
 };
 
-module.exports = { sayHello, sayWorld };
+export { sayHello, sayWorld };

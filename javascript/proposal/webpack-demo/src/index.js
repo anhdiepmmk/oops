@@ -1,5 +1,6 @@
-const _ = require("lodash");
-const { sayHello } = require("./services/hello");
+import "./styles/main.scss";
+import _ from "lodash";
+import { sayHello } from "./services/hello";
 
 sayHello();
 

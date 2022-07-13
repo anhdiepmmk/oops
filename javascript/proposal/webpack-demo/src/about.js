@@ -1,4 +1,4 @@
-const _ = require("lodash");
-const { sayWorld } = require("./services/hello");
+import _ from "lodash";
+import { sayWorld } from "./services/hello";
 
 sayWorld();
