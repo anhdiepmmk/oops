@@ -3,12 +3,15 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: { index: ["./src/index.js"], about: ["./src/about.js"] },
+  entry: {
+    home: ["./src/pages/home/entry.js"],
+    about: ["./src/pages/about/entry.js"],
+  },
   output: {
-    filename: "[name]-[contenthash].js",
+    filename: "scripts/[name]-[contenthash].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
-    assetModuleFilename: "[name][ext]",
+    assetModuleFilename: "assets/[name][ext]",
   },
   mode: "development",
   devServer: {
@@ -20,13 +23,20 @@ module.exports = {
   devtool: "source-map",
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "style.css",
+      filename: "styles/style-[contenthash].css",
       linkType: "text/css",
     }),
     new HtmlWebpackPlugin({
       title: "hi mom",
       filename: "index.html",
-      template: "./index.html",
+      template: "./src/pages/home/template.html",
+      chunks: ["home"],
+    }),
+    new HtmlWebpackPlugin({
+      title: "hi dad",
+      filename: "about.html",
+      template: "./src/pages/about/template.html",
+      chunks: ["about"],
     }),
   ],
   module: {
@@ -59,6 +69,10 @@ module.exports = {
       {
         test: /\.(png|jpg|jpeg|svg|gif)$/i,
         type: "asset/resource",
+        generator: {
+          // this will override assetModuleFilename
+          filename: "images/[name]-[contenthash][ext]",
+        },
       },
     ],
   },
