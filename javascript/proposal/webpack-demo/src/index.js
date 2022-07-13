@@ -1,7 +1,9 @@
 import "./styles/main.scss";
+import dog from "./assets/shiba.jpeg";
 import _ from "lodash";
 import { sayHello } from "./services/hello";
 
 sayHello();
 
-document.body.innerText = "hi there";
+const dogImg = document.getElementById("dogImg");
+dogImg.src = dog;

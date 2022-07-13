@@ -8,6 +8,7 @@ module.exports = {
     filename: "[name]-[contenthash].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
+    assetModuleFilename: "[name][ext]",
   },
   mode: "development",
   devServer: {
@@ -54,6 +55,10 @@ module.exports = {
             options: { sourceMap: true },
           },
         ],
+      },
+      {
+        test: /\.(png|jpg|jpeg|svg|gif)$/i,
+        type: "asset/resource",
       },
     ],
   },
