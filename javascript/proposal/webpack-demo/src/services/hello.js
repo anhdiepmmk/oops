@@ -1,9 +1,11 @@
 const sayHello = () => {
-  console.log("hello!");
+  const defaultMessage = "hello!";
+  console.log(defaultMessage);
 };
 
 const sayWorld = () => {
-  console.log("world!");
+  const defaultMessage = "world!";
+  console.log(defaultMessage);
 };
 
 module.exports = { sayHello, sayWorld };
