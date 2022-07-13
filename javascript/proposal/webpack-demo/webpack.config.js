@@ -16,7 +16,7 @@ module.exports = {
     compress: true,
     open: true,
   },
-  devtool: "inline-source-map",
+  devtool: "source-map",
   plugins: [
     new MiniCssExtractPlugin({
       filename: "style.css",
