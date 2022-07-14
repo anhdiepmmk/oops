@@ -15,7 +15,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      "@demo": path.resolve(__dirname, "src"),
+      "@": path.resolve(__dirname, "src"),
     },
   },
   mode: "development",
