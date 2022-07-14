@@ -1,8 +1,8 @@
 import "../../styles/main.scss";
 import dog from "../../assets/shiba.jpeg";
 import _ from "lodash";
-import { sayHello } from "../../services/hello";
-import { generateJoke } from "../../services/joke";
+import { sayHello } from "@demo/services/hello";
+import { generateJoke } from "@demo/services/joke";
 
 sayHello();
 

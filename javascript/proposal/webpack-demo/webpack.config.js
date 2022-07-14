@@ -13,6 +13,11 @@ module.exports = {
     clean: true,
     assetModuleFilename: "assets/[name][ext]",
   },
+  resolve: {
+    alias: {
+      "@demo": path.resolve(__dirname, "src"),
+    },
+  },
   mode: "development",
   devServer: {
     static: "./dist",
