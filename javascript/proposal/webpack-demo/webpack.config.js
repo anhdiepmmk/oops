@@ -79,6 +79,14 @@ module.exports = {
   optimization: {
     splitChunks: {
       chunks: "all",
+      name(module, chunks, cacheGroupKey) {
+        const moduleFileName = module
+          .identifier()
+          .split("/")
+          .reduceRight((item) => item);
+        const allChunksNames = chunks.map((item) => item.name).join("~");
+        return `${cacheGroupKey.toLowerCase()}-${allChunksNames}-${moduleFileName}`;
+      },
     },
   },
 };
