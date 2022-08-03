@@ -1,4 +1,4 @@
-const helloService = require("./hello");
+import { sayHello } from "./hello";
 
 describe("hello", () => {
   afterEach(() => {
@@ -7,7 +7,7 @@ describe("hello", () => {
 
   it("should say hello", () => {
     jest.spyOn(console, "log");
-    helloService.sayHello();
+    sayHello();
     expect(console.log).toHaveBeenCalled();
     expect(console.log).toHaveBeenCalledWith("hello!");
   });
