@@ -11,4 +11,4 @@ async function generateJoke() {
   document.getElementById("joke").innerText = joke;
 }
 
-export { generateJoke };
+module.export = { generateJoke };
