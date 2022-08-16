@@ -16,15 +16,7 @@ describe("App.tsx", () => {
     test("should match snapshot", () => {
       const { asFragment } = render(<App />);
 
-      expect(asFragment()).toMatchInlineSnapshot(`
-<DocumentFragment>
-  <h1
-    data-testid="heading-hello"
-  >
-    Hello world
-  </h1>
-</DocumentFragment>
-`);
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
@@ -39,15 +31,7 @@ describe("App.tsx", () => {
     test("should match snapshot", () => {
       const { asFragment } = render(<App message="hi mom" />);
 
-      expect(asFragment()).toMatchInlineSnapshot(`
-<DocumentFragment>
-  <h1
-    data-testid="heading-hello"
-  >
-    hi mom
-  </h1>
-</DocumentFragment>
-`);
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 });
