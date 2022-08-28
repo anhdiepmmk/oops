@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App.tsx when message not provied should match snapshot 1`] = `
+<DocumentFragment>
+  <h1
+    data-testid="heading-hello"
+  >
+    Hello world
+  </h1>
+</DocumentFragment>
+`;
+
+exports[`App.tsx when provide a message should match snapshot 1`] = `
+<DocumentFragment>
+  <h1
+    data-testid="heading-hello"
+  >
+    hi mom
+  </h1>
+</DocumentFragment>
+`;

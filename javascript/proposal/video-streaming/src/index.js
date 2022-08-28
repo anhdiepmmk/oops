@@ -8,7 +8,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/video", function (req, res) {
-  // bytes=32324-
+  // bytes=983040-
   const range = req.headers.range;
 
   if (!range) {
